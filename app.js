@@ -40,24 +40,24 @@
 // }
 
 // function myString(e){
-    //     console.log(e)
-    // }
-    
-    // myString("rafay")
-    // myString("rafa]]]cxfxfy")
-    // myString("rafgyygtay")
-    // myString("rafay")
-    // myString("rafay")
-    // function getAge(){
-    //      var birthdate = document.getElementById("date").value
-    //     // console.log("birthdate",birthdate)
-    //     var birthYear = new Date(birthdate).getFullYear();
-    //     // console.log("birthYear",birthYear);
-    //     var currentYear = new Date().getFullYear();
-    //     // console.log("currentYear",currentYear)
-    //     var age =  currentYear - birthYear;
-    //     // console.log("age", age)
-    // }
+//     console.log(e)
+// }
+
+// myString("rafay")
+// myString("rafa]]]cxfxfy")
+// myString("rafgyygtay")
+// myString("rafay")
+// myString("rafay")
+// function getAge(){
+//      var birthdate = document.getElementById("date").value
+//     // console.log("birthdate",birthdate)
+//     var birthYear = new Date(birthdate).getFullYear();
+//     // console.log("birthYear",birthYear);
+//     var currentYear = new Date().getFullYear();
+//     // console.log("currentYear",currentYear)
+//     var age =  currentYear - birthYear;
+//     // console.log("age", age)
+// }
 
 //     var eidDate = "27-may-2026";
 //     eidDate = new Date(eidDate).getTime()
@@ -67,21 +67,37 @@
 // timeLeft = Math.floor(timeLeft/(1000*60*60*24))
 // console.log(timeLeft)
 
-//  var eidDate = "27-may-2026";
-//     eidDate = new Date(eidDate).getTime()
-// console.log(eidDate);
-// var currrenttime =  new Date().getTime();
-// var timeLeft = eidDate - currrenttime;
-// timeLeft = Math.floor(timeLeft/(1000*60*60*24))
-// console.log(timeLeft)
+var days = document.getElementById("days");
+var hours = document.getElementById("hours");
+var mins = document.getElementById("mins");
+var secs = document.getElementById("secs");
 
-    // function getAge(){
-    //      var birthdate = document.getElementById("date").value
-    //     console.log("birthdate",birthdate)
-    //     var birthYear = new Date(birthdate).getFullYear();
-    //     console.log("birthYear",birthYear);
-    //     var currentYear = new Date().getFullYear();
-    //     console.log("currentYear",currentYear)
-    //     var age =  currentYear - birthYear;
-    //     console.log("age", age)
-    // }
+var eidDate = "27-may-2026";
+eidDate = new Date(eidDate).getTime()
+console.log(eidDate);
+var currrenttime = new Date().getTime();
+var timeLeft = eidDate - currrenttime;
+var practice = new Date(timeLeft)
+console.log(timeLeft)
+var daysLeft = Math.floor(timeLeft / (1000 * 60 * 60 * 24))
+var hoursLeft = Math.floor(timeLeft  % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
+var minsLeft = Math.floor(timeLeft  % (1000 * 60 * 60 ) / (1000 * 60))
+var secsLeft = Math.floor(timeLeft  % (1000 * 60 ) / 1000)
+console.log(daysLeft, hoursLeft, minsLeft, secsLeft)
+
+days.innerHTML = daysLeft;
+hours.innerHTML = hoursLeft;
+mins.innerHTML = minsLeft;
+secs.innerHTML = secsLeft;
+
+
+// function getAge(){
+//      var birthdate = document.getElementById("date").value
+//     console.log("birthdate",birthdate)
+//     var birthYear = new Date(birthdate).getFullYear();
+//     console.log("birthYear",birthYear);
+//     var currentYear = new Date().getFullYear();
+//     console.log("currentYear",currentYear)
+//     var age =  currentYear - birthYear;
+//     console.log("age", age)
+// }
